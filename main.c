@@ -23,9 +23,6 @@ void abertura() {
     printf("***************\n");
     printf(" Jogo da Forca \n");
     printf("***************\n\n");
-    
-    printf("Word hint: %s\n\n",descricaoPalavraIngles);
-    printf("Dica da palavra: %s\n\n",descricaoPalavra);
 }
 
 void chuta() {
@@ -131,6 +128,9 @@ void escolhePalavra() {
     //printf("%s\n", significadoPalavra);
     
     fclose(f);
+        
+    printf("Word hint: %s\n\n",descricaoPalavraIngles);
+    printf("Dica da palavra: %s\n\n",descricaoPalavra);
 }
 
 int acertou() {
@@ -166,9 +166,9 @@ int enforcou() {
 
 int main() {
     setlocale(LC_ALL,"PORTUGUESE");
-
-    escolhePalavra();
+    
     abertura();
+    escolhePalavra();
 
     do {
         desenhaForca();
@@ -208,7 +208,7 @@ int main() {
         printf("       \\_______/           \n");
     }
     
-    printf("Sua descricao e: %s\n",significadoPalavra);
+    printf("Sua descricao e: %s\n\n",significadoPalavra);
     
     system("PAUSE");
     return 0;
